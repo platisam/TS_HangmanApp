@@ -55,6 +55,36 @@ const LEFT_ARM = (
   ></div>
 );
 
+const RIGHT_LEG = (
+  <div
+    style={{
+      width: "100px",
+      height: "10px",
+      background: "black",
+      position: "absolute",
+      top: "210px",
+      right: "-90px",
+      rotate: "60deg",
+      transformOrigin: "left bottom",
+    }}
+  ></div>
+);
+
+const LEFT_LEG = (
+  <div
+    style={{
+      width: "100px",
+      height: "10px",
+      background: "black",
+      position: "absolute",
+      top: "210px",
+      right: "0",
+      rotate: "-60deg",
+      transformOrigin: "right bottom",
+    }}
+  ></div>
+);
+
 interface Props {}
 
 const HangmanDrawing = (props: Props) => {
@@ -64,6 +94,8 @@ const HangmanDrawing = (props: Props) => {
       {BODY}
       {RIGHT_ARM}
       {LEFT_ARM}
+      {RIGHT_LEG}
+      {LEFT_LEG}
       <div
         style={{
           height: "50px",
