@@ -85,9 +85,7 @@ const LEFT_LEG = (
   ></div>
 );
 
-interface Props {}
-
-const HangmanDrawing = (props: Props) => {
+const HangmanDrawing = () => {
   return (
     <div style={{ position: "relative" }}>
       {HEAD}
