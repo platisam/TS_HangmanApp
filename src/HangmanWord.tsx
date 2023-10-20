@@ -2,7 +2,7 @@ import React from "react";
 
 const HangmanWord = () => {
   const word = "test";
-  const guessedLetters = ["t"];
+  const guessedLetters = ["t", "e", "g"];
 
   return (
     <div
