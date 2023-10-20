@@ -1,4 +1,4 @@
-import React from "react";
+import styles from "./Keyboard.module.css";
 
 interface Props {}
 
@@ -41,7 +41,11 @@ const Keyboard = (props: Props) => {
       }}
     >
       {KEYS.map((key) => {
-        return <button key={key}>{key}</button>;
+        return (
+          <button className={styles.btn} key={key}>
+            {key}
+          </button>
+        );
       })}
     </div>
   );
