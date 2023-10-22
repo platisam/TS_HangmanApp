@@ -1,7 +1,5 @@
 import styles from "./Keyboard.module.css";
 
-interface Props {}
-
 const KEYS = [
   "a",
   "b",
@@ -31,7 +29,17 @@ const KEYS = [
   "z",
 ];
 
-const Keyboard = (props: Props) => {
+type KeyboardProps = {
+  activeLetters: string[];
+  inactiveLetters: string[];
+  addGuessLetter: (letter: string) => void;
+};
+
+export function Keyboard({
+  activeLetters,
+  inactiveLetters,
+  addGuessedLetter,
+}: KeyboardProps) {
   return (
     <div
       style={{
@@ -42,13 +50,15 @@ const Keyboard = (props: Props) => {
     >
       {KEYS.map((key) => {
         return (
-          <button className={`${styles.btn}`} key={key}>
+          <button
+            onClick={() => addGuessedLetter(key)}
+            className={`${styles.btn}`}
+            key={key}
+          >
             {key}
           </button>
         );
       })}
     </div>
   );
-};
-
-export default Keyboard;
+}
